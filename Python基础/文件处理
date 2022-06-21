@@ -2,7 +2,7 @@
 os.path.dirname(__file__)
 
 2、拼接路径
-os.path.join
+os.path.join()
 
 3、获取当前路径下所有文件名，并返回一个list
 file_list = os.listdir(file_path)
