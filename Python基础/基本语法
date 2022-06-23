@@ -1,10 +1,26 @@
-1、dict的get()方法
+一、dict的get()方法
 如果key不存在，可以返回None，或者自己指定的value：
 
 >>> d.get('Thomas')
 >>> d.get('Thomas', -1)
 -1
 
-2、 定义默认参数要牢记一点：默认参数必须指向不变对象！
+二、定义默认参数要牢记一点：默认参数必须指向不变对象！
 我们可以用None这个不变对象来实现
 
+三、可变参数允许你传入0个或任意个参数，这些可变参数在函数调用时自动组装为一个tuple。而关键字参数允许你传入0个或任意个含参数名的参数，这些关键字参数在函数内部自动组装为一个dict
+
+可变参数
+def calc(*numbers):
+    sum = 0
+    for n in numbers:
+        sum = sum + n * n
+    return sum
+    
+关键字参数
+def person(name, age, **kw):
+    print('name:', name, 'age:', age, 'other:', kw)
+
+四、切片
+1、list的前10个数，每两个取一个：L[:10:2]
+2、甚至什么都不写，只写[:]就可以原样复制一个list
